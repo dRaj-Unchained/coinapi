@@ -1,3 +1,5 @@
+version: 0.2
+
 phases:
    install:
      runtime-versions:
@@ -16,7 +18,7 @@ phases:
   post_build:
      commands:
        - echo Writing image definitions file...
-       - printf '[{"name": "webapp-container", "imageUri": "%s"}]' $ECR_URI/SIMAGE_NAME > imagedefinitions.json
+       - printf '[{"name":"webapp-container","imageUri":"%s"}]'  $ECR_URI/SIMAGE_NAME > imagedefinitions.json
  artifacts:
      files: /aspnet-demo/imagedefinitions.json
      discard-paths: yes
