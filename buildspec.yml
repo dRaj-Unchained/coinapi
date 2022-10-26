@@ -9,8 +9,12 @@ phases:
     commands:
       - echo Build started on `date`
       - dotnet publish -c release -o ./build_output CoinDataService/CoinDataService.csproj
+  post_build:
+      commands:
+      - printf '[{"name":"sample-app","imageUri":"httpd:2.4"}]' > imagedefinitions.json
 artifacts:
   files:
     - CodeBuild-CoinDataService/build_output/**/*
     - scripts/**/*
     - appspec.yml
+    - imagedefinitions.json
