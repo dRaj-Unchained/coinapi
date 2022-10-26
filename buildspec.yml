@@ -3,7 +3,7 @@ version: 0.2
 phases:
    install:
      runtime-versions:
-       docker: 19
+       docker: 18
   pre_build:
      commands:
         - ECR_URI=951928314227.dkr.ecr.us-east-1.amazonaws.com
