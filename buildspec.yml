@@ -3,22 +3,23 @@ version: 0.2
 phases:
    install:
      runtime-versions:
-       docker: 18
+       docker: 19
+
   pre_build:
      commands:
         - ECR_URI=951928314227.dkr.ecr.us-east-1.amazonaws.com
         - IMAGE_NAME="webapp"
         - echo Installing ECS Tools...
-        - dotnet tool install -g Amazon. ECS. Tools
+        - dotnet tool install -g Amazon.ECS.Tools
    build:
      commands:
        - echo Build started on `date'
-       - cd ./aspnet-demo
+       - cd ./CoinDataService
        -  dotnet ecs push-image $REPOSITORY_URI --tag $IMAGE_NAME
   post_build:
      commands:
        - echo Writing image definitions file...
        - printf '[{"name":"webapp-container","imageUri":"%s"}]'  $ECR_URI/SIMAGE_NAME > imagedefinitions.json
  artifacts:
-     files: /aspnet-demo/imagedefinitions.json
+     files: /CoinDataService/imagedefinitions.json
      discard-paths: yes
