@@ -4,11 +4,11 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore CoinDataService.csproj
+      - dotnet restore CoinDataService/CoinDataService.csproj
   build:
     commands:
       - echo Build started on `date`
-      - dotnet publish -c release -o ./build_output CoinDataService.csproj
+      - dotnet publish -c release -o ./build_output CoinDataService/CoinDataService.csproj
 artifacts:
   files:
     - CodeBuild-CoinDataService/build_output/**/*
