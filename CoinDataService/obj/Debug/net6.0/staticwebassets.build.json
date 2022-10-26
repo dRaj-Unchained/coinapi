@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "j3Ft4A5I0Tgg1l3PsGSObpM8FfHVbg2G2HH7REt+9fA=",
+  "Source": "CoinDataService",
+  "BasePath": "_content/CoinDataService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
