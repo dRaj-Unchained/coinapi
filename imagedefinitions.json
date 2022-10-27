@@ -1,0 +1,6 @@
+[
+    {
+      "name": "webapp-container",
+      "imageUri": "951928314227.dkr.ecr.us-east-1.amazonaws.com/webapp:latest"
+    }
+  ]

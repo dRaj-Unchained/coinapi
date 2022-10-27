@@ -12,10 +12,4 @@ phases:
        - echo Build started on `date'
        - cd ./CoinDataService
        -  dotnet ecs push-image $REPOSITORY_URI --tag $IMAGE_NAME
-    post_build:
-     commands:
-       - echo Writing image definitions file...
-      - printf '[{"name":"container_name","imageUri":"image_URI"}]' > imagedefinitions.json
-  artifacts:
-     files: /CoinDataService/imagedefinitions.json
-     discard-paths: yes
+     
