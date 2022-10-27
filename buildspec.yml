@@ -15,7 +15,7 @@ phases:
     post_build:
      commands:
        - echo Writing image definitions file...
-       - printf '[{"name":"webapp-container","imageUri":"%s"}]'  $ECR_URI/$IMAGE_NAME > imagedefinitions.json
+       - printf '[{"name":"webapp-container","imageUri":"951928314227.dkr.ecr.us-east-1.amazonaws.com/webapp"}]' > imagedefinitions.json
   artifacts:
      files: /CoinDataService/imagedefinitions.json
      discard-paths: yes
